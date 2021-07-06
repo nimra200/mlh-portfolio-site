@@ -45,7 +45,7 @@ def register():
             return error, 418
 
     ## TODO: Return a register page
-    return "Register Page not yet implemented", 501
+    return render_template('register.html', title="REGISTRATION PAGE", url=os.getenv("URL"))
 
 @app.route('/login', methods=('GET', 'POST'))
 def login():

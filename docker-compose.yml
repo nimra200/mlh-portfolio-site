@@ -1,6 +1,7 @@
 version: "3"
 services:
     web:
+        container_name: web
         build: .
         ports:
             - "80:80"
@@ -12,6 +13,7 @@ services:
         depends_on:
             - db
     db:
+        container_name: db
         image: postgres
         restart: always
         env_file:
